@@ -1,0 +1,66 @@
+html {
+    margin: 0;
+}
+
+body {
+    background: rgb(2, 0, 36);
+}
+
+.bombCard {
+    background-color: beige;
+    height: 200px;
+    width: 150px;
+    border-radius: 15px;
+    margin: 10px 20px;
+    background-image: url(/img/mina.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.2s ease-in-out;
+}
+
+#noBombCard {
+    background-color: beige;
+    height: 200px;
+    width: 150px;
+    border-radius: 15px;
+    margin: 10px 20px;
+    background-image: url(/img/mina.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.2s ease-in-out;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bombCard:hover{
+    background-image: url(/img/explosion.png);
+}
+
+#noBombCard:hover{
+    background-image: url(/img/water.jpg);
+}
+
+img {
+    height: 100px;
+    animation: run 4s ease-in-out 2s infinite alternate forwards;
+    position: relative;
+}
+
+@keyframes run{
+    0% {left :0px; top:0px;}
+    25% {left :200px; top:0px;}
+    50% {left :200px; top:100px;}
+    75% {left :0px; top:100px;}
+    100% {left :0px; top:0px;}
+}
+
+
+.bombHelper:hover{
+    display: none;
+}   
